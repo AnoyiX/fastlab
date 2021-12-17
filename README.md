@@ -1,2 +1,27 @@
-# fastweb
-An extension library of Web application for FastAPI framework 
+# fastlab
+An extension library for FastAPI framework
+
+## Features
+
+- [Logging](): 
+- [Models]()
+- [Utils]()
+- [Routers]()
+
+## Installation
+
+use `pip` to install the package:
+
+```
+pip install fastlab
+```
+
+## Getting started
+
+```
+
+```
+
+
+## Contributing
+
