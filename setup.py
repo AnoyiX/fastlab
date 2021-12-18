@@ -27,8 +27,9 @@ setup(
     url='https://github.com/tezignlab/fastlab',
     description='An extension library for FastAPI framework',
     long_description=(
-        open('README.md', 'r', encoding='utf8').read()
+        open('README.md', encoding='utf8').read()
     ),
+    long_description_content_type="text/markdown",
     license='MIT License',
     install_requires=[
         'fastapi>=0.70.0',
