@@ -1,12 +1,12 @@
-from fastlab.routers import HealthzRouter
+from fastlab.routers import HealthRouter
 
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
 app = FastAPI()
-app.include_router(HealthzRouter)
+app.include_router(HealthRouter)
 
 
 client = TestClient(app)
-response = client.get("/healthz")
+response = client.get("/health")
 assert response.status_code == 200

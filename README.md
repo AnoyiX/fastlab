@@ -104,14 +104,14 @@ print(TimeUtils.timestamp())
 
 ### Routers
 
-#### 🔰 HealthzRouter
+#### 🔰 HealthRouter
 
-API for health check, endpoint `/healthz`.
+API for health check, endpoint `/health`.
 
 ```python
 from fastapi import FastAPI
-from fastlab.routers import HealthzRouter
+from fastlab.routers import HealthRouter
 
 app = FastAPI()
-app.include_router(HealthzRouter)
+app.include_router(HealthRouter)
 ```

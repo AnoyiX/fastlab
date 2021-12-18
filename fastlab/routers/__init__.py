@@ -1,4 +1,4 @@
-from .healthz import HealthzRouter
+from .health import HealthRouter
 
 
-__all__ = ['HealthzRouter']
+__all__ = ['HealthRouter']

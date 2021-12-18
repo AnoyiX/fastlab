@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 
-HealthzRouter = APIRouter()
+HealthRouter = APIRouter()
 
 
-@HealthzRouter.get("/healthz")
+@HealthRouter.get("/health")
 async def healthz():
     return ''
