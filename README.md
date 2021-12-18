@@ -1,5 +1,10 @@
 # FastLab
+
 An extension library for FastAPI framework
+
+[![Supported Versions](https://img.shields.io/pypi/pyversions/fastlab.svg)](https://pypi.org/project/fastlab)
+[![PyPI version](https://badge.fury.io/py/fastlab.svg)](https://pypi.org/project/fastlab)
+[![License](https://img.shields.io/github/license/tezignlab/fastlab)](https://github.com/tezignlab/fastlab/blob/main/LICENSE)
 
 ## Features
 
