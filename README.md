@@ -12,7 +12,7 @@ An extension library for FastAPI framework
 
 use `pip` to install the package:
 
-```
+```shell
 pip install fastlab
 ```
 
@@ -22,7 +22,7 @@ pip install fastlab
 
 Easy to log string to console, see more: [https://docs.python.org/3/library/logging.html](https://docs.python.org/3/library/logging.html)
 
-```
+```python
 from fastlab import logs
 
 logs.warning('warn')    # 2021-12-18 14:23:31.000  WARNING 88493 --- [  MainThread] test_logs        : warn
@@ -34,9 +34,9 @@ logs.error('error')     # 2021-12-18 14:23:31.000    ERROR 88493 --- [  MainThre
 
 Common Models
 
-#### Response
+#### 🔰 Response
 
-```
+```python
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastlab.models import Response
@@ -56,7 +56,7 @@ async def item():
 ```
 
 Get `http://localhost:8080/item` response: 
-```
+```json
 {
     "code": 0,
     "message": "",
@@ -67,9 +67,9 @@ Get `http://localhost:8080/item` response:
 }
 ```
 
-#### PageData
+#### 🔰 PageData
 
-```
+```python
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastlab.models import Response, PageData
@@ -93,8 +93,9 @@ async def items(skip: int = 0, limit: int = 10):
 
 ### Utils
 
-#### TimeUtils
-```
+#### 🔰 TimeUtils
+
+```python
 from fastlab.utils import TimeUtils
 
 # Print now timestamp: 1639732030521
@@ -103,11 +104,11 @@ print(TimeUtils.timestamp())
 
 ### Routers
 
-#### HealthzRouter
+#### 🔰 HealthzRouter
 
 API for health check, endpoint `/healthz`.
 
-```
+```python
 from fastapi import FastAPI
 from fastlab.routers import HealthzRouter
 
