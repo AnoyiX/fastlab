@@ -120,3 +120,17 @@ from fastlab.routers import HealthRouter
 app = FastAPI()
 app.include_router(HealthRouter)
 ```
+
+## Testing
+
+Install this package locally
+
+```
+python setup.py develop
+```
+
+Run test case
+
+```
+python tests/test_logs.py
+```
