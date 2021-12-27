@@ -6,12 +6,20 @@ An extension library for FastAPI framework
 [![PyPI version](https://badge.fury.io/py/fastlab.svg)](https://pypi.org/project/fastlab)
 [![License](https://img.shields.io/github/license/tezignlab/fastlab)](https://github.com/tezignlab/fastlab/blob/main/LICENSE)
 
+
 ## Features
 
 - [Logging](#Logging) 
 - [Models](#Models) 
+  - [Response](#-Response)
+  - [PageData](#-PageData)
 - [Utils](#Utils)
+  - [TimeUtils](#-TimeUtils)
 - [Routers](#Routers)
+  - [HealthRouter](#-HealthRouter)
+- [Decorators](#Decorators)
+  - [WithEnvConfig](#-WithEnvConfig)
+
 
 ## Installation
 
@@ -120,6 +128,26 @@ from fastlab.routers import HealthRouter
 app = FastAPI()
 app.include_router(HealthRouter)
 ```
+
+### Decorators
+
+#### 🔰 WithEnvConfig
+
+Replace the configuration with system environment variables.
+
+```python
+from fastlab.decorators import WithEnvConfig
+
+@WithEnvConfig(prefix='FL_')
+def load_config():
+    return {'name': 'fastlab', 'version': '0.2.0'}
+
+conf = load_config()
+```
+
+If set system environment variable `FL_NAME=hello`, the `conf['name']` value will be `hello`. 
+The environment variable name should be in uppercase, and split fields with `_` .
+
 
 ## Testing
 
