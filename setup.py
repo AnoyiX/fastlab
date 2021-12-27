@@ -33,8 +33,9 @@ setup(
     license='MIT License',
     install_requires=[
         'fastapi>=0.70.0',
+        'PyYAML>=6.0',
     ],
-    keywords="fastapi logs utils models",
+    keywords="fastapi logs utils models routers decorators",
     packages=get_packages('fastlab'),
     classifiers=[
         "Development Status :: 4 - Beta",
