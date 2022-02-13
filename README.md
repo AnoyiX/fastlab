@@ -133,20 +133,30 @@ app.include_router(HealthRouter)
 
 #### 🔰 WithEnvConfig
 
-Replace the configuration with system environment variables.
+Replace the configuration with system environment variables. Follows:
+
+1. Change the setting name to uppercase
+2. Prefix it with `prefix` setting
+3. Escape any underscores (`_`) by duplicating them
+4. Convert all periods (.) to underscores (`_`)
 
 ```python
 from fastlab.decorators import WithEnvConfig
 
 @WithEnvConfig(prefix='FL_')
 def load_config():
-    return {'name': 'fastlab', 'version': '0.2.0'}
+    return {
+      'name': 'fastlab', 
+      'version': '0.2.1',
+      'extra': {
+        'memory_lock': False
+      }
+    }
 
 conf = load_config()
 ```
 
-If set system environment variable `FL_NAME=hello`, the `conf['name']` value will be `hello`. 
-The environment variable name should be in uppercase, and split fields with `_` .
+For example, `FL_EXTRA_MEMORY__LOCK=true` transform `conf['extra']['memory_lock']` as `True`
 
 
 ## Testing

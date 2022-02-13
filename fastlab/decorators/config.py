@@ -6,7 +6,7 @@ from ..logging import logs
 
 def replace_with_env(d: dict, prefix: str):
     for k, v in d.items():
-        env = f'{prefix}{k.upper()}'
+        env = f'{prefix}{k.upper().replace("_", "__")}'
         if isinstance(v, dict):
             replace_with_env(v, f'{env}_')
         else:
