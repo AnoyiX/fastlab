@@ -152,10 +152,8 @@ def log_sleep():
 
 @LogExecTimeAsync
 async def log_sleep_async():
-    await asyncio..sleep(1.5)
+    await asyncio.sleep(1.5)
 ```
-
-If you 
 
 
 #### 🔰 WithEnvConfig
