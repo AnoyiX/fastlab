@@ -9,16 +9,22 @@ An extension library for FastAPI framework
 
 ## Features
 
-- [Logging](#Logging) 
-- [Models](#Models) 
-  - [Response](#-Response)
-  - [PageData](#-PageData)
-- [Utils](#Utils)
-  - [TimeUtils](#-TimeUtils)
-- [Routers](#Routers)
-  - [HealthRouter](#-HealthRouter)
-- [Decorators](#Decorators)
-  - [WithEnvConfig](#-WithEnvConfig)
+- [FastLab](#fastlab)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Getting started](#getting-started)
+    - [Logging](#logging)
+    - [Models](#models)
+      - [🔰 Response](#-response)
+      - [🔰 PageData](#-pagedata)
+    - [Utils](#utils)
+      - [🔰 TimeUtils](#-timeutils)
+    - [Routers](#routers)
+      - [🔰 HealthRouter](#-healthrouter)
+    - [Decorators](#decorators)
+      - [🔰 LogExecTime](#-logexectime)
+      - [🔰 WithEnvConfig](#-withenvconfig)
+  - [Testing](#testing)
 
 
 ## Installation
@@ -130,6 +136,27 @@ app.include_router(HealthRouter)
 ```
 
 ### Decorators
+
+#### 🔰 LogExecTime
+
+Log wrapper for measuring sync & async function execution times.
+
+```python
+import asyncio
+import time
+from fastlab.decorators import LogExecTime
+
+@LogExecTime
+def log_sleep():
+    time.sleep(1.5)
+
+@LogExecTimeAsync
+async def log_sleep_async():
+    await asyncio..sleep(1.5)
+```
+
+If you 
+
 
 #### 🔰 WithEnvConfig
 

@@ -23,7 +23,7 @@ setup(
     name='fastlab',
     version=get_version('fastlab'),
     author='Anoyi',
-    author_email='545544032@qq.com',
+    author_email='anoyi@qq.com',
     url='https://github.com/tezignlab/fastlab',
     description='An extension library for FastAPI framework',
     long_description=(
@@ -32,7 +32,7 @@ setup(
     long_description_content_type="text/markdown",
     license='MIT License',
     install_requires=[
-        'fastapi>=0.70.0',
+        'fastapi>=0.78.0',
         'PyYAML>=6.0',
     ],
     keywords="fastapi logs utils models routers decorators",
@@ -47,6 +47,9 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
 )
